@@ -1,0 +1,489 @@
+/* 합불공개_기존 css 오버라이딩 또는 추가 */
+.wrap-label {
+    .mine2 {
+        &:before {display:inline-block;width:6px;height:6px;margin:-2px 6px 0 0;border-radius:100%;border:5px solid #0FC5DB;vertical-align:middle;content:''}
+    }
+    .rank {
+        &:before {display:inline-block;width:14px;height:14px;margin:-2px 6px 0 0;vertical-align:middle;content:''}
+    }
+    .rank1 {
+        &:before {background:#6969F1;}
+    }
+    .rank2 {
+        &:before {background:#B3B3F8;}
+    }
+    .rank3 {
+        &:before {background:#E8E8FD;}
+    }
+}
+.tbl-score {
+    th {
+        .opt-subject {border:0 none}
+    }
+    .highlight, .highlight th, .highlight td {background-color:#FFF4CE} /* impartant 합격예측 표와 스타일이 충돌해서 삭제함 */
+    .dark, .dark th, .dark td, {background-color:#777c87!important;color:$white!important;}
+    .dim {background-color:#7f7f7f;font-size:fs(12);color:$white}
+    
+    &.tbl-applicant {margin-top:0}
+    + .tbl-applicant {border-top:0 none;
+        .wrap-scroll {border-top:0 none;border-bottom:1px solid #e5e5e5}
+        tr:first-child td {border-top:0 none;}
+    }
+    .data-details {
+        td {padding:20px 0;}
+        .tbl-score-details tbody td {height: 50px;}
+        .info-apply .tit-details {text-align:left;}
+    }
+}
+.wrap-scroll {
+    .tbl-score{
+        .data-details {
+            .inner {max-height:initial;}
+        }
+    }
+}
+
+.tbl-applicant {
+    .txt-num {color:#FF6974}
+    .txt-left {text-align:left!important}
+}
+.detail-result {
+    .box-notice {margin:80px 0 0 0}
+}
+
+.wrap-layer {
+    .layer-pass-pop {
+        .layer-body {padding:60px 35px 40px}
+        .select-g  {
+            .txt {font-size:fs(16);}
+            // .check .ico-group {opacity:0.5}
+            input:checked+.check {  
+                .mark-circle {background-color:$point;background:url(../../images/select-on.png) 0 0 no-repeat;color:$white;}
+                .ico-group {opacity:1}
+                .txt:after {border:2px solid $point;background-color:$white;}
+            }
+        }
+        .ico-group {display:inline-block;height:20px;margin-right:5px;padding:0 8px;border-radius:15px;font-size:fs(12);line-height:18px;color:$white;
+            &.group1 {background-color:#FF6974}
+            &.group2 {background-color:#6969F1}
+            &.group3 {background-color:#FCA029}
+            &.group4 {background-color:$black}
+        }
+
+        .select-pass {display:block;text-align:center;margin-top:25px;
+            .select-g {display:inline-block;width:239px;height:218px;margin:5px;padding:0;
+                .mark-circle {top:30px}
+                .inp-txt {position:absolute;top: 12px;left: 65px;opacity:1;z-index:1;background:#fff;width:160px;height:34px;text-align:center}
+            }
+            
+        }
+        .wr-uni-info {text-align: center;margin-bottom:25px;border-top:6px solid $point;
+            .uni-info {margin-top:8px;}
+            .info-cont {margin-top:13px;
+                .tit-uni {font-size:fs(20)}
+                .txt-major {font-size:fs(14)}
+            }
+        }
+        .box-univ-pass {width:535px;height:120px;margin-top:10px;padding:30px 40px;background:url(../../images/pass_pop_img1.jpg) no-repeat;color:#fff;
+            .ico-group {display:inline-block}
+            .wr-univ {display:inline-block;vertical-align: top;}
+            .tit-uni {font-size:fs(20)}
+            .txt-major {margin-top:5px;font-size:fs(14)}
+        }
+        .tab-certify {background-color:transparent;margin:25px 0;
+            .btn-tab {height: 50px;border-bottom:3px solid #e5e5e5;text-align:center;color:#999;font-size:fs(16)}
+            .on {border-color:$black;background-color:transparent;color:$black;}
+        }
+        .inp-btn {position:relative;margin:10px 0 5px;
+            .btn-search {position:absolute;top:12px;right:20px;width:90px;height:36px;border-radius:20px;font-size:fs(14);background-color:#999;color:$white;}
+        }
+    }
+    .layer-pass-sel {
+        .layer-body {padding:40px 80px 40px;text-align: center;border-top:6px solid $point;}
+        .select-pass {display:block;text-align:center;margin:25px auto 0;
+            .select-g {
+                display:inline-block;width:239px;height:218px;margin:5px 3px;padding:0;
+                &::before {display:none;}
+                .mark-circle {top:30px}
+                .inp-txt {position:absolute;top: 12px;left: 65px;opacity:1;z-index:1;padding:2px 5px;background:#fff;width:160px;height:34px;text-align:center}
+                .ico_txt {
+                    display:block;max-height:none;text-align:center;margin-top:60px;
+                    .ico {display:block;width:65px;height:65px;margin:0 auto 10px;}
+                    .ico1 {background:url(../../images/pass_pop_icon1.png) 0 0 no-repeat;}
+                    .ico2 {background:url(../../images/pass_pop_icon2.png) 0 0 no-repeat;}
+                    .ico3 {background:url(../../images/pass_pop_icon3.png) 0 0 no-repeat;}
+                    .ico4 {background:url(../../images/pass_pop_icon4.png) 0 0 no-repeat;}
+                }
+                input:checked+.check {  
+                    .mark-circle {background-color:$point;background:url(../../images/select-on.png) 0 0 no-repeat;color:$white;}
+                    .ico_txt {color:$point;font-weight:700}
+                    .txt:after {border:2px solid $point;}
+                }
+            }
+             
+        }
+        .wr-uni-info {text-align: center;margin-bottom:25px;
+            .uni-info {margin-top:8px;}
+            .info-cont {margin-top:13px;
+                .tit-uni {font-size:fs(20)}
+                .txt-major {font-size:fs(14)}
+            }
+        }
+    }
+    .layer-withdraw {width:460px;
+        .tit-sub {margin:20px 0 5px;}
+    }
+}
+.wrap-layer .layer-popup {
+    &.layer-simulate { width:1000px;
+        .layer-body {padding:60px 64px;text-align:left;
+            .tit-simulate {display:inline-block;position:relative;font-weight:700;font-size:fs(26);
+                &:before {content:'';background:$point;position: absolute;height:18px;bottom:-4px;left:-4px;right:-4px;}
+                span {position:relative;}
+            }
+            .list-simulate{display:table;width:980px;margin:60px -50px 0;
+                li {position:relative;display:table-cell;width:33%;text-align:center;
+                    &:before {content:'';position: absolute;top:90px;right:-10px;width:18px;height:33px;background:url(../../images/pass_lay_arrow.png) 0 0 no-repeat;}
+                    &:last-child:before {display:none}
+                    .ico {display:block;width:220px;height:220px;margin:0 auto;border-radius: 100%;background: #F4F4F4;line-height:220px;
+                        &:before {content:'';display:inline-block;margin:0 auto;vertical-align:middle;}
+                        &.ico1:before {width:110px;height:93px;background:url(../../images/pass_lay_icon1.png) 0 0 no-repeat;}
+                        &.ico2:before {width:111px;height:74px;background:url(../../images/pass_lay_icon2.png) 0 0 no-repeat;}
+                        &.ico3:before {width:110px;height:90px;background:url(../../images/pass_lay_icon3.png) 0 0 no-repeat;}
+                    }
+                    .tit {display:block;margin-top:30px;font-size:fs(18)}
+                    .desc {display:block;margin-top:20px;font-weight:300;font-size:fs(14);line-height:1.8;color:#999}
+                }
+            }
+        }
+        .btn-close {
+            position:absolute;top:0;right:-40px;width:25px;height:25px;
+            .ico-comm {width:23px;height:23px;background:url(../../images/pass_lay_close.png) 0 0 no-repeat;}
+            
+        }
+    }
+}
+.wrap-layer .layer-default {max-width: 656px;
+    &.layer-pass-pop {
+        .layer-body {padding:40px 60px 60px;}
+    }
+    &.layer-pass-sch {
+        .layer-body {padding:0;}
+        .form-search {width:100%;margin-top:-1px}
+        .search-steps {border-bottom:0 none}
+        .search-steps .btn-search {border:1px solid #349EE5}
+        .search-steps .fld-step3 {width:100%;}
+        .search-steps .fld-step4 {position:relative;width:100%;}
+        .box-search .keyword-result {width:auto;right:-1px}
+        .box-search .btn-close {border:1px solid #349EE5}
+        .layer-foot .btn-check {
+            &:disabled, &[disabled] {background-color:#e5e5e5;color:#999;}
+        }
+        .data-txt {display:table;width:100%;
+            .txt {display:table-cell;text-align:center;vertical-align:middle;font-weight:300}
+        }
+        .search-steps .fld-step3 .list-letter li {width:5%;text-align:center}
+        .search-steps .fld-step3 .list-letter li:first-child {width:10%}
+        .search-steps .fld-step3 .box-condition {width:100%;padding:12px 0;
+            .data-txt {height:276px}
+        }
+        .search-steps .fld-step3 .list-uni {position:relative;overflow:initial;display:block;clear:both;*zoom:1;
+            // &:before {content:'';position:absolute;top:-12px;bottom:-12px;left:33%;width:33%;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+            &:after {display:block;height:0;content:".";font-size:0;visibility:hidden;clear:both}
+            li {width:33%;padding:0 20px}
+        }
+        
+        .search-steps .fld-step4 .box-condition {padding:12px 0;
+            .data-txt {height:316px}
+        }
+        .search-steps .fld-step4 .list-cate {width:139px;}
+        .search-steps .fld-step4 .data-group {position:relative;width:100%;margin-bottom:0;display:block;clear:both;*zoom:1;
+            // &:before {content:'';position:absolute;top:-12px;bottom:-12px;left:50%;border-left:1px solid #ddd;}
+            &:after {display:block;height:0;content:".";font-size:0;visibility:hidden;clear:both}
+            dd {float:left;width:100%;padding:0 20px}
+        }
+    }
+}
+
+/* 합불공개_내정보 */
+.box-signus {
+    .btn-edit {display:block;width:100%;height:50px;margin:40px auto 0;border-radius:30px;background-color:$point ;color:$white;}
+    .wr-withdraw {margin-top:20px;text-align:right;
+        .link {font-size:14px;text-decoration: underline;color:#7f7f7f}
+    }
+}
+
+/* 합불공개_주의사항(토글형태) */
+.fld-notice {
+    margin-top:60px;
+    &:first-child {margin-top:41px;}
+    &.open {
+        .tit-step {position:relative;border-bottom:1px solid #e5e5e5;}
+        .btn-step {font-weight:700;
+            &:after {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
+        }
+        .panel-steps {display:block;}
+    }
+    .panel-steps {display:none;margin-top:40px;}
+    .tit-step {
+        display:block;width:100%;border-bottom:1px solid #e5e5e5;
+        .btn-step {
+            position:relative;width:100%;height:72px;border-top:1px solid #e5e5e5;font-size:fs(16);text-align:left;
+            &:before {display:inline-block;width:26px;height:26px;margin:0 8px 0 20px;font-weight:700;font-size:fs(20);line-height:26px;border-radius:50%;border:2px solid #000;color:#000;text-align:center;content:'!'}
+            &:after {position:absolute;top:50%;right:40px;width:14px;height:8px;margin-top:-4px;background:url(../../images/ico-arr.png) 0 0 no-repeat;content:''}
+        }
+    }
+    .list-items {
+        margin-left:20px;
+        li {padding-left:8px;font-weight:300;line-height:1.9;text-indent:-8px;word-break:keep-all;}
+    }
+    
+}
+
+/* 합불공개_Main */
+.pass-result-feature {
+    position:relative;background-color:#262E40;background:url(../../images/pass_bg_result1.jpg) 50% 50% no-repeat;text-align:center;
+    .inner {height:900px}
+}
+.cont-result.result-pass {
+    .txt-emph {color:$low}
+    .tit-moji {
+        + .wrap-label {padding-top:0}
+    }
+    .step-pass {background:$white;padding-top:10px;
+        .top-step-pass {width:1400px;margin:-120px auto 0;padding-top:80px;background:$white;}
+        .card-group {width:900px;
+            .flex-card {position:relative;margin-left:0;padding:35px 20px 45px;border-top:6px solid $white;border-radius: 6px;background:$white;text-align:center;
+                &:after {content:'';width:0;position:absolute;top:38px;left:-1px;bottom:48px;border-right: 2px dotted #e5e5e5;}
+                &.on {z-index:2;border-top:6px solid $point;-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);border-right:0 none;
+                    &:after {display:none}
+                    .data-info {font-weight:700}
+                }
+                &:first-child:after {display:none}
+                .tit-info {margin-bottom:18px;font-weight:700;font-size:fs(14);color:#0FC5DB}
+                .data-info {margin-top:18px;font-weight:500;font-size:fs(18)}
+                .ico {display:inline-block;width:100px;height:100px;}
+                .ico.step1 {background:url(../../images/pass_icon_step01.png) 0 0 no-repeat}
+                .ico.step2 {background:url(../../images/pass_icon_step02.png) 0 0 no-repeat}
+                .ico.step3 {background:url(../../images/pass_icon_step03.png) 0 0 no-repeat}
+                .flo_event {position: absolute;top:-20px;right:-45px;}
+            }
+        }
+    }
+    .step-pass-cont {padding-bottom:140px;background:#fafafa;text-align:center;
+        .tit-section {font-weight:700;font-size:fs(20);color:$point}
+        .txt-desc {margin-top:10px;font-weight:500;font-size:fs(26)}
+        .txt-major {@include ellipsis(1);width:100%;}
+        .wr-btn {width:1080px;margin:20px auto 0;text-align:right}
+        .link-import {display:inline-block;height:36px;padding:0 18px;border:1px solid #D5D5D5;border-radius:20px;font-size:fs(14);line-height:34px;background-color:$white;color:$black;}
+        .card-group {width:1080px;margin:20px auto 0;
+            .flex-card {position:relative;min-height:333px;margin-left:12px;text-align:center;
+                &:first-child {margin-left:0;}
+                &.etc .inner-card {background-color: #F4F4F4;}
+                .inner-card {position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;padding:20px 25px;text-align:left;border-radius: 6px;background:$white;-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);text-align:center;}
+                .tit-info {position:relative;margin-bottom:18px;font-weight:700;font-size:fs(20);text-align:left;
+                    .rank {position: absolute;bottom:0;right:0;font-weight:400;font-size:fs(14);}
+                }
+                .wr-inp {display:block;height:36px;text-align:center;margin:0 -8px 20px}
+                .lab-order {
+                    display:inline-block;position:relative;width:31%;
+                    .inp-order {overflow:hidden;position:absolute;top:0;left:0;z-index:-1;width:1px;height:1px;opacity:0.01;}
+                    .inp-order {
+                        &:checked + .btn-order {background-color:$point;border-color:$point;color:$white;}
+                    }
+                    .btn-order {display:inline-block;width:100%;height:36px;border-radius:20px;border:1px solid #e5e5e5;font-size:fs(14);color:#999;line-height:34px;background-color:$white;text-align:center}
+                }
+                .wr-sel {
+                    .opt-possible {
+                        height:65px;border:0 none;border-bottom:1px solid #E5E5E5;background-color:transparent;
+                        &[disabled], &:disabled {border-bottom:1px solid #E5E5E5;background-color:transparent;color:#999;-webkit-text-fill-color:#777;}
+                    }
+                    .opt-possible:last-child {border-bottom:0 none}
+                    .link {
+                        display:block;@include ellipsis(1);box-sizing:border-box;padding:18px 35px 18px 20px;height:65px;text-align:left;border-bottom:1px solid #E5E5E5;background: url(/assets/images/arr-link.png) 100% 50% no-repeat;
+                        &.disabled {background-color:transparent;border-color:#e5e5e5}
+                    }
+                    .link:last-child {border-bottom:0 none}
+                }
+                .btn-add {position:absolute;width:80%;top:50%;left:50%;margin:-50px 0 0 -40%;font-size:fs(16);text-align:center;
+                    &:before {content:'+';display:block;width:30px;height:30px;margin:0 auto 20px;border-radius:100%;font-size:fs(28);line-height:29px;background-color:#000;color:$white;text-align:center;vertical-align:middle;}
+                }
+                .btn-close {
+                    overflow:hidden;position:absolute;top:15px;right:15px;padding:5px;margin:0 auto;font-size:0;line-height:0;text-indent:-9999px;
+                    &:after {display:block;width:13px;height:13px;margin:0 auto;background:url(../../images/ico-delete.png) 0 0 no-repeat;content:''}
+                }
+                .uni-info {text-align:center;font-size:fs(14);line-height:1.8;
+                    .tit-uni {display:block;margin-top:8px;font-size:fs(16);}
+                    .txt-formal {color:#999}
+                    .info-date {margin-top:7px;font-size:fs(14);font-weight:700;
+                        .date {padding-left:7px;color:$point}
+                    }
+                }
+                .btn-report {display:block;width:100%;height:40px;margin-top:10px;background-color:#0FC5DB;color:$white;font-size:fs(14);line-height:40px;text-align:center}
+                .btn-certify {position:absolute;bottom:-44px;display:block;width:100%;height:50px;padding-top:6px;font-size:fs(14);line-height:44px;text-align:center;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;border-radius: 6px;-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+                    &.fin {background-color:#FAFAFA;color:#999}
+                    &.do {background-color:#999;color:$white;}
+                    &.do:after {display:inline-block;width:6px;height:9px;margin-left:6px;background:url(../../images/ico-direct3.png) 0 0 no-repeat;content:''}
+                    &.result {background-color:#e1e1e1;color:#000}
+                    &.result:after {display:inline-block;width:6px;height:9px;margin-left:6px;background:url(../../images/ico-direct1.png) 0 0 no-repeat;content:''}
+                }
+            }
+            &.step3 {padding-bottom:44px;
+                .tit-info {display:inline-block;padding-right:45px;}
+                .flo_ico {position:absolute;top:10px;right:10px;width:50px;height:50px;font-weight:500;font-size:14px;color:$white;text-align:center;line-height:50px;border-radius:100%;
+                    &.pass {background-color:#FF6974;-webkit-box-shadow: 0 10px 10px rgba(255, 105, 116, 0.5);box-shadow: 0 10px 10px rgba(255, 105, 116, 0.5);}
+                    &.fail {background-color:#999;-webkit-box-shadow: 0 10px 10px rgba(153, 153, 153, 0.5);box-shadow: 0 10px 10px rgba(153, 153, 153, 0.5);}
+                    &.pre {background-color:#6969F1;-webkit-box-shadow: 0 10px 10px rgba(105, 105, 241, 0.5);box-shadow: 0 10px 10px rgba(105, 105, 241, 0.5);}
+                }
+            }
+           
+        }
+    }
+    .bn-tipoff {padding:0;background:#EFEFEF;text-align:center;
+        .inner-tipoff {position:relative;height:100px;width:1080px;margin:0 auto;font-size:fs(20);line-height:100px;
+            &:before {display:inline-block;width:170px;height:115px;margin:-30px 40px 0 0;background:url(../../images/pass_ico_tipoff.png) 0 0 no-repeat;content:'';vertical-align: top;}
+            .sub {font-size:fs(14);color:#999;margin-left:40px;
+                &:after {display:inline-block;width:6px;height:9px;margin-left:6px;background:url(../../images/ico-direct4.png) 0 0 no-repeat;content:''}
+            }
+        }
+    }
+
+    /* 합공리포트 */
+    
+    .report-summary-pass {padding:10px 0 140px;background:#fafafa;
+        .list-status {
+            @include card;margin:-70px 0 80px;height:210px;padding:30px 0 30px;border-top:6px solid  $point;font-size:0;line-height:0;background-color:$white;-webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+            li {
+                display:inline-block;padding:0 20px;border-left:1px solid #e5e5e5;font-size:fs(16);line-height:1.5;text-align:left;
+                &:first-child {border-left:0 none;flex: 1.65;width:500px;}
+                &:nth-child(2) {flex: .8;width:255px}
+            }
+            .tit-status {display:block;height:70px;padding-left:16px;font-weight:400;font-size:fs(18);}
+            .cont-status {
+                display:block;overflow:hidden;white-space:nowrap;
+                .count {display:inline-block;margin:0 16px;font-weight:400;font-size:fs(26);vertical-align:bottom;
+                    .tit {display:block;font-weight:400;font-size:fs(14)}
+                    .data {
+                        display:block;overflow:hidden;max-width:106px;font-size:fs(16);
+                        strong {font-weight:700;font-size:fs(32);}
+                    }
+                    &.dim {color:#999}
+                }
+                .ico-sign {display:inline-block;width:20px;height:20px;margin:0 -4px 15px;border-radius:100%;background:$point;color:$white;text-align:center;line-height:19px;vertical-align:bottom;}
+                
+            }
+            .num-time {font-size:fs(20);}
+            .txt-data {font-size:fs(16);color:#FF6974}
+
+        }
+    }
+    .moji-ai {width:100%;
+        &.card-group {
+            .flex-card {background:none;}
+        }
+        .box-chart {height:420px}
+        .box-comment {flex: 1.2;
+            .moji-comment {min-height:235px;}
+            .list-info {margin-top:60px;}
+        }     
+    }
+    .moji-chart {width:100%;
+        &.card-group {
+            .flex-card {padding:60px 0;border-radius:5px;text-align:center;
+              .tit-chart {margin-top:40px;font-size:fs(26)}
+            }
+        }
+    }
+}
+
+/* 합공리포트_분석대상자제외 */
+.pass_report_except {
+    position:relative;background-color:#262E40;background:#262E40;text-align:center;
+    .inner {height:80px;}
+    .item-mark {
+        position:absolute;top:25px;left:50%;margin:0 0 0 -540px;color:$white;
+        span {display:inline-block;height:20px;margin-right:5px;padding:0 8px;border-radius:15px;font-size:fs(12);line-height:18px;}
+        .mark-area {background-color:$white;color:$black}
+        .mark-unit {background-color:#FF6974;color:$white}
+        .mark-line {background-color:#999;color:$white}
+    }
+    
+    .bnr-warning {
+        height:80px;padding:25px 0;font-size:fs(18);background-color:#6969F1;color:$white;text-align:center;
+        &:before {display:inline-block;width:30px;height:30px;margin-right:10px;font-weight:700;font-size:fs(20);border-radius:50%;background-color:$white;color:#6969F1;text-align:center;content:'!'}
+        .txt-name {font-weight:700;color:#FF6974}
+    }
+}
+
+
+/* 합불등록_이벤트 */
+.pass-event-feature {
+    position:relative;background-color:#262E40;background:url(../../images/pass_bg_result2.jpg) 50% 50% no-repeat;text-align:center;
+    .inner {overflow:hidden;height:560px;}
+    .tit-feature {margin-top:80px;font-weight:200;font-size:fs(70);color:$white;letter-spacing:15px;
+        .tit-sub {display:block;width:248px;height:40px;margin:0 auto 15px;font-weight:400;font-size:fs(14);line-height:32px;color:$white;letter-spacing:0;background:url(../../images/pass_ribbon.png) 50% 50%;
+            strong {font-size:fs(20)}
+        }
+    }
+    .txt-sub {margin-top:10px;font-size:fs(14);color:$white;}
+}
+.pass-event {
+    .list-card-tab {
+        @include card;position:relative;z-index:10;width:900px;margin:-85px auto 0;
+        li {overflow:hidden;position:relative;margin-left:20px;padding:35px 35px 40px;border-bottom:5px solid $white;background-color:$white;text-align:center;cursor:pointer;-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            &:first-child {margin-left:0;}
+            &:nth-child(1) {
+                .txt {color:$point}
+            }
+            &:nth-child(2) {
+                .txt {color:#0FC5DB}
+            }
+            &.on, &:hover {border-bottom:5px solid $point;
+                &:nth-child(2) {border-color:#0FC5DB}
+            }
+            .tit {display:block;font-weight:700;font-size:fs(14);}
+            .txt {display:block;font-size:fs(18)}
+            .cont {display:block;margin-top:13px;font-weight:300;font-size:fs(26);}
+        }
+    }
+    .step-pass-cont {padding:100px 20px 140px;background:#fafafa;text-align:center;
+        .tit-section {font-weight:700;font-size:fs(20);color:$point}
+        .txt-desc {margin-top:-25px;font-weight:700;font-size:fs(26)}
+        .wr-btn {width:1080px;margin:20px auto 0;text-align:right}
+        .link-import {display:inline-block;height:36px;padding:0 18px;border:1px solid #D5D5D5;border-radius:20px;font-size:fs(14);line-height:34px;background-color:$white;color:$black;}
+        .card-group {width:1080px;margin:20px auto 0;
+            .flex-card {position:relative;height:auto;min-height:363px;margin-left:60px;text-align:center;
+                &.etc .inner-card {background-color: #F4F4F4;}
+                .inner-card {position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;padding:25px 25px;text-align:left;border-radius: 6px;background:$white;-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);text-align:center;}
+                .tit-info {position:relative;margin-bottom:18px;font-weight:700;font-size:fs(20);text-align:left;
+                    .rank {position: absolute;bottom:0;right:0;font-weight:400;font-size:fs(14);}
+                }
+                .uni-info {text-align:center;font-size:fs(14);line-height:1.8;
+                    .tit-uni {display:block;margin-top:8px;font-size:fs(16);}
+                    .txt-formal {color:#999}
+                    .info-date {margin-top:15px;font-size:fs(14);font-weight:700;
+                        .date {padding-left:7px;color:$point}
+                    }
+                }
+                .btn-result {
+                    display:inline-block;height:40px;margin-top:10px;padding:0 25px;border-radius:20px;background:$point;color:$white;font-size:fs(14);line-height:40px;text-align:center;
+                    &:disabled, &[disabled] {width:160px;background:#F4F4F4;color:#999}
+                }
+                .btn-add {position:absolute;width:80%;top:50%;left:50%;margin:-50px 0 0 -40%;font-size:fs(16);text-align:center;
+                    &:before {content:'+';display:block;width:30px;height:30px;margin:0 auto 20px;border-radius:100%;font-size:fs(28);line-height:29px;background-color:#000;color:$white;text-align:center;vertical-align:middle;}
+                }
+            }
+        }
+        &#event2 {background:#F4F4F4;
+            .flex-card {
+                .info-date {
+                    .date {color:#0FC5DB}
+                }
+                .btn-result {
+                    background:#0FC5DB;
+                    &:disabled, &[disabled] {width:160px;background:#F4F4F4;color:#999}
+                }
+            }
+        }
+    }
+}

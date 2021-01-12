@@ -1,0 +1,151 @@
+/* 지원전략추천_기존 css 오버라이딩 또는 추가 */
+
+.tbl-scroll {
+    width:100%;margin-top:0;
+    &[role="table"] {border-top:1px solid #e5e5e5;clear:both;}
+    .wrap-scroll {
+        overflow-x:hidden;overflow-y:auto;margin:10px 0;padding:10px;max-height:902px;
+        &::-webkit-scrollbar {width:4px;}
+        &::-webkit-scrollbar-track {background:#D9D9D9;}
+        &::-webkit-scrollbar-thumb {background:$point;}
+    }
+    [role="row"] {overflow:hidden;}
+    [role="columnheader"] {
+        float:left;height:50px;border-left:1px solid #e5e5e5;font-size:fs(14);line-height:49px;background-color:#f4f4f4;text-align:center;
+        &:first-child {width:95px;border-left:0 none;}
+        &:nth-child(2) {width:95px}
+        &:nth-child(3) {width:90px}
+        &:nth-child(4) {width:220px}
+        &:nth-child(5) {width:220px}
+        &:nth-child(6) {width:120px}
+        &:nth-child(7) {width:120px}
+        &:last-child {overflow:hidden;width:auto;min-width:120px;}
+    }
+}
+
+/* 지원전략추천 */
+.recomm-wrap {
+    .tit-section {
+        text-align: center;
+        .in {display:inline-block;font-size:fs(36);line-height:1.4;text-decoration: underline;color:#333}
+        &.type-line .in {position: relative;text-decoration:none;}
+        &.type-line .in::before {content:'';position: absolute;bottom:3px;left:-15px;right:-15px;height:10px;background:#42DF8B}
+        &.type-line .in .in_line {position: relative;}
+    }
+    /* 재수있냐없냐_상단 */
+    .recomm-luck-feature {
+        position:relative;background:url(../../images/luck_top_bg.png) 50% 50% no-repeat;background-size:cover;text-align:center;
+        .inner {height:870px;padding-top:80px}
+        .tit-section {margin-top:55px}
+        .wr_label_radio {
+            @include card;position:relative;z-index:10;width:680px;margin:0 auto 0;
+            li {margin:0 -42px 0 -20px}
+            .label_radio {
+                position:relative;display: inline-block;
+                .inp_r {position:absolute;left:-9999px;top:0}
+                .radio_ico {display: inline-block;overflow: hidden;width: 382px;height: 477px;text-indent:-9999px;vertical-align: top;line-height: 0;font-size:0;}
+                &.sel_no .radio_ico {background: url(../../images/luck_selno.png) 50% 50% no-repeat}
+                &.sel_yes .radio_ico {background: url(../../images/luck_selyes.png) 50% 50% no-repeat;}
+                .radio_ico:after {content:'';display:block;width: 382px;height: 477px}
+                .inp_r:checked+.radio_ico:after {background-image:url(../../images/luck_sel_on.png)}
+            }
+        }
+    }
+
+    .recomm-luck {
+        padding:130px 0 180px;
+        .wrap-btn button {width:300px;margin:0 5px;font-size:fs(16);}
+        .recomm-luck-cont {width:1080px;margin:0 auto;}
+        .wr_label_radio2 {
+            @include card;position:relative;z-index:10;width:1080px;margin:12px auto 0;
+            li {margin:0 17px 0 -20px}
+            .label_radio {
+                position:relative;display: inline-block;
+                .inp_r {position:absolute;left:-9999px;top:0}
+                .radio_ico {display: inline-block;overflow: hidden;width: 382px;height: 530px;;text-indent:-9999px;vertical-align: top;line-height: 0;font-size:0;}
+                &.sel_a .radio_ico {background: url(../../images/luck_card1_a.png) 50% 50% no-repeat}
+                &.sel_b .radio_ico {background: url(../../images/luck_card1_b.png) 50% 50% no-repeat;}
+                &.sel_c .radio_ico {background: url(../../images/luck_card1_c.png) 50% 50% no-repeat;}
+                .radio_ico:after {content:'';display:block;width: 382px;height: 530px;}
+                .inp_r:checked+.radio_ico:after {background-image:url(../../images/luck_card1_on.png)}
+            }
+        }
+        
+        .graph_poss {
+            position:relative;display:inline-block;overflow:hidden;width:87px;height:30px;text-align:center;background: #E5E5E5;border-radius: 5px;
+            &::before {content:'';position: absolute;top:0;left:0;right:0;bottom:0;background:url(../../images/luck_graph_mask.png) 50% 50% no-repeat;}
+            .graph {display:block;height:30px;background: #0FC5DB linear-gradient(90deg, #13D86F 0%, #0FC5DB 100%) 0% 0% no-repeat padding-box;border-radius: 5px;}
+            .num {position: absolute;top:0;left:0;width:100%;line-height:28px;color:$black;font-size:fs(14)}
+        }
+
+        .info-univ {
+            @include card;width:670px;margin:20px auto 0;
+            .wr-card {
+                width:442px;height:558px;padding:60px 0 0 120px;margin-left: -70px;background:url(../../images/luck_card2_a.png) 50% 50% no-repeat;
+                &.card-a {background-image:url(../../images/luck_card2_a.png);}
+                &.card-b {background-image:url(../../images/luck_card2_b.png);}
+                &.card-c {background-image:url(../../images/luck_card2_c.png);}
+                .tit-info {font-size:fs(22)}
+                .uni-info {
+                    width:242px;margin-top:35px;text-align: center;
+                    .tit-uni {display:block;margin-top:10px;font-size:fs(22)}
+                    .txt-major {margin-top:10px;font-size:fs(14)}
+                }
+                .btn-app {display:inline-block;height:50px;margin-top:50px;width:150px;border-radius:25px;background:$black;color:#969696;font-size:fs(16);line-height:50px;text-align:center}
+                .btn-result {display:inline-block;height:50px;margin-top:50px;width:150px;border-radius:25px;background:$point;color:$white;font-size:fs(16);line-height:50px;text-align:center}
+            }
+            .wr-info {
+                padding:70px 0 0;margin-left: -45px;
+                dl {
+                    @include card;height:60px;
+                    dt {
+                        position:relative;width:240px;padding-left:144px;font-size:fs(16);color:#999;
+                        &::before {content:'';position: absolute;top:12px;left:0;width:135px;border-top:1px solid #E5E5E5;}
+
+                    }
+                    dd {
+                        text-align:right;font-size:fs(16);color:#999;
+                        strong {font-size:fs(18);color:$black;}
+                    }
+                }
+                
+            }
+        } 
+        .wr_list_univ {
+            @include card;position:relative;z-index:10;width:1140px;margin:12px auto 80px;
+            li {margin-left:-20px;
+                .no-data {padding:120px 0;color:#999;text-align: center;}
+                .wr-card {
+                    width:383px;height:580px;padding:30px 0 0 40px;background:url(../../images/luck_card3_a.png) 50% 50% no-repeat;
+                    &.card-a {background-image:url(../../images/luck_card3_a.png);}
+                    &.card-b {background-image:url(../../images/luck_card3_b.png);}
+                    &.card-c {background-image:url(../../images/luck_card3_c.png);}
+                    .tit-info {font-size:fs(22);color:$white}
+                    .uni-info {
+                        position:relative;width:284px;margin-top:116px;text-align: center;
+                        .tit-uni {display:block;margin-top:10px;font-size:fs(22)}
+                        .txt-major {margin-top:10px;font-size:fs(14)}
+                        .ico_lose {position:absolute;top:-10px;left:50px;width:60px;height:60px;background:#999;border-radius:100%;font-size:fs(20);color:$white;line-height:60px;text-align: center;-webkit-box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);}
+                    }
+                    .btn-app {display:inline-block;height:50px;margin-top:30px;width:150px;border-radius:25px;background:$black;color:$white;font-weight:bold;font-size:fs(16);line-height:50px;text-align:center}
+                    .btn-result {display:inline-block;height:50px;margin-top:30px;width:150px;border-radius:25px;background:$point;color:$white;font-weight:bold;font-size:fs(16);line-height:50px;text-align:center}
+                }
+                .wr-info {
+                    margin-left:-40px;
+                    dl {
+                        @include card;width:284px;height:45px;margin:0 auto;line-height:45px;border-bottom:1px solid #E5E5E5;
+                        &:last-child {border-bottom:0 none}
+                        dt {width:170px;font-size:fs(16);color:#999;text-align:center}
+                        dd {
+                            text-align:right;font-size:fs(16);color:#999;
+                            strong {font-size:fs(18);color:$black;}
+                            .graph_poss {margin-top:10px}
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}

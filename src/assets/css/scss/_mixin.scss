@@ -1,0 +1,96 @@
+﻿// mixin.scss ver0.1(2017-07-27)
+//common
+@mixin clearfix() {
+    &:after {
+        display:block;visibility:hidden;height:0;font-size:0;line-height:0;clear:both;content:'';
+    }
+}
+//box
+@mixin sizing($value:border-box) {
+    -webkit-box-sizing:$value;
+    -moz-box-sizing:$value;
+    box-sizing:$value;
+}
+
+//layout
+@mixin layout() {
+    max-width:$grid;
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin inner() {
+    max-width:($grid - 24);
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin column($value) {
+    width:percentage(($value / 12));
+}
+@mixin gutter($value) {
+    padding-right:($value / 2);
+    padding-left:($value / 2);
+}
+
+//text
+@mixin ellipsis($value) {
+    @if $value == 1 {
+        display:block;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        word-break:break-all;
+        word-wrap: break-word;
+    }
+    @else {
+        display:block;
+        display:-webkit-box;
+        overflow:hidden;
+        -webkit-box-orient:vertical;
+        box-orient:vertical;
+        -webkit-line-clamp:$value;
+        line-clamp:$value;
+        text-overflow:ellipsis;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+}
+@mixin shadow($h, $v, $blur, $color) {
+    -webkit-box-shadow:$h $v $blur $color;
+    box-shadow:$h $v $blur $color;
+}
+//expression
+@mixin gradation($color1,$color2) {
+    background-color:$color1;
+    background-image:-webkit-gradient(linear,left top,left bottom,from($color1),to($color2));
+    background-image:-moz-linear-gradient(top,$color1,$color2);
+    background-image:-o-linear-gradient(top,$color1,$color2);
+    background-image:linear-gradient(to bottom,$color1,$color2);
+}
+@mixin opacity($value1,$value2) {
+opacity:$value1;
+filter:alpha(opacity=$value2);
+}
+@mixin transform($value) {
+-webkit-transform:$value;
+-moz-transform:$value;
+-ms-transform:$value;
+transform:$value;
+}
+@mixin transition($value) {
+-webkit-transition:$value;
+-moz-transition:$value;
+-o-transition:$value;
+transition:$value;
+}
+
+//responsive
+$break-rotate:640px;
+$break-xlarge:1200px;
+@mixin respond-to($media) {
+@if $media == mobile { //0~640까지
+    @media only screen and (max-width:$break-rotate) {@content;}
+}
+@else if $media == pc { //0 ~ 1199까지
+    @media only screen and (max-width:$break-xlarge - 1) {@content;}
+}
+}
