@@ -16,7 +16,6 @@ const commonApi = {
 
 	// 공지사항
 	getRetrieveNoticeList: function(param) {
-		console.log('Config', Config);
 		const url =
 			Config.API_DOMAIN +
 			Config.API.GET_RETRIEVE_NOTICE_LIST.URI +

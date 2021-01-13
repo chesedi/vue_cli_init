@@ -107,12 +107,12 @@ module.exports = {
   // devServer
   devServer: {
     port: process.env.VUE_APP_PORT || 3000,
-    proxy: {
-      '/api': {
-        target: 'https://dev-pass.etoos.com',
-        changeOrigin: true
-      },
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://dev-pass.etoos.com',
+    //     changeOrigin: true
+    //   },
+    // }
   }
 
   // pluginOptions
